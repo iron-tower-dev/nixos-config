@@ -1,23 +1,73 @@
-# NixOS specific
+# NixOS configuration .gitignore
+
+# Build results
 result
 result-*
 
-# Hardware configuration (may contain sensitive info)
-# Uncomment if you don't want to track hardware-configuration.nix
+# SSH keys (NEVER commit these!)
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+id_ecdsa
+id_ecdsa.pub
+github
+github.pub
+*.ppk
+*.p12
+*.pfx
+
+# Secrets and sensitive data
+secrets/
+*.secret
+*.age
+*.gpg
+*.asc
+passwords.txt
+credentials.*
+
+# Hardware configuration (contains disk UUIDs)
+# Uncomment if you want to exclude hardware configs
 # hardware-configuration.nix
+# hosts/*/hardware-configuration.nix
 
 # Editor files
-.vscode/
-.idea/
 *.swp
 *.swo
 *~
+.vscode/
+.idea/
+*.sublime-*
+.project
+.classpath
+.settings/
 
 # OS files
 .DS_Store
-Thumbs.db
+Thums.db
+Desktop.ini
 
-# Secrets
-secrets/
-*.age
-*.key
+# Nix build artifacts
+.direnv/
+.envrc
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# Private notes (if you keep personal notes in the repo)
+PRIVATE.md
+TODO.md
+notes/
+
+# Age encryption keys
+age-key.txt
+key.txt
