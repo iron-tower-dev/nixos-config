@@ -8,6 +8,28 @@ A modular, flake-based NixOS configuration featuring:
 - 🚀 **Performance tuning** for optimal system responsiveness
 - 🔒 **Security hardening** with firewall, AppArmor, and fail2ban
 - 📦 **Development shells** for isolated per-project environments
+- 🖥️ **Multi-host support** for desktop (iron-tower) and laptop (iron-zephyrus)
+
+## 🎯 Quick Links
+
+- **New Installation?** → Start with [QUICKSTART.md](QUICKSTART.md) or [INSTALL.md](INSTALL.md)
+- **Multiple Machines?** → See [MULTI_HOST_SETUP.md](MULTI_HOST_SETUP.md)
+- **GitHub Setup?** → Check [GITHUB_SETUP.md](GITHUB_SETUP.md)
+- **Waybar Guide?** → Read [home/WAYBAR_GUIDE.md](home/WAYBAR_GUIDE.md)
+
+## 🖥️ Configured Hosts
+
+### iron-tower (Desktop)
+- Full desktop workstation setup
+- Gaming and development focused
+- Configuration: `hosts/iron-tower/`
+
+### iron-zephyrus (ASUS G14 Zephyrus Laptop)
+- Portable gaming and development
+- NVIDIA GPU switching (PRIME)
+- ASUS-specific optimizations (asusctl, supergfxctl)
+- Battery management and power profiles
+- Configuration: `hosts/iron-zephyrus/`
 
 ## 📁 Project Structure
 

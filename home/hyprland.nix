@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  # Install help script
+  home.file.".config/hyprland/scripts/hyprland-help.sh" = {
+    source = ./scripts/hyprland-help.sh;
+    executable = true;
+  };
+  
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
@@ -105,6 +111,7 @@
         "$mod, E, exec, nautilus"
         "$mod, V, togglefloating,"
         "$mod, D, exec, rofi -show drun"
+        "$mod, H, exec, ~/.config/hyprland/scripts/hyprland-help.sh"
         "$mod, P, pseudo,"
         "$mod, J, togglesplit,"
         

@@ -49,6 +49,9 @@
   # Home Manager configuration modules
   imports = [
     ./hyprland.nix
+    ./waybar.nix
+    ./wlogout.nix
+    ./discord.nix
     ./wezterm.nix
     ./fish.nix
     ./starship.nix
@@ -56,18 +59,8 @@
     ./rofi.nix
   ];
 
-  # Git configuration
-  programs.git = {
-    enable = true;
-    userName = "Derrick";
-    userEmail = "your.email@example.com";  # Change this
-    extraConfig = {
-      init.defaultBranch = "main";
-      pull.rebase = true;
-      core.editor = "nvim";
-    };
-  };
-
+  # Git configuration is in ./git.nix
+  
   # Direnv integration
   programs.direnv = {
     enable = true;
