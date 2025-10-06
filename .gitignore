@@ -1,0 +1,23 @@
+# NixOS specific
+result
+result-*
+
+# Hardware configuration (may contain sensitive info)
+# Uncomment if you don't want to track hardware-configuration.nix
+# hardware-configuration.nix
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+secrets/
+*.age
+*.key
