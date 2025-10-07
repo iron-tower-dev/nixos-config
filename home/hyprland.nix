@@ -1,9 +1,20 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Install help script
   home.file.".config/hyprland/scripts/hyprland-help.sh" = {
     source = ./scripts/hyprland-help.sh;
+    executable = true;
+  };
+  
+  # Install wallpaper script with Stylix image path
+  home.file.".config/hyprland/scripts/set-wallpaper.sh" = {
+    text = ''
+      #!/usr/bin/env bash
+      # Set wallpaper using swww
+      sleep 1
+      swww img "${config.stylix.image}" --transition-type fade --transition-duration 2
+    '';
     executable = true;
   };
   
@@ -18,7 +29,7 @@
       # Startup applications
       exec-once = [
         "swww-daemon"
-        "sleep 1 && swww img ${config.stylix.image} --transition-type fade --transition-duration 2"
+        "~/.config/hyprland/scripts/set-wallpaper.sh"
         "waybar"
         "mako"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
@@ -115,6 +126,9 @@
         # Screenshots
         "$mod, S, exec, grim -g \"$(slurp)\" - | wl-copy"
         "$mod SHIFT, S, exec, grim -g \"$(slurp)\" ~/Pictures/Screenshots/$(date +%Y%m%d-%H%M%S).png"
+        
+        # Reload wallpaper
+        "$mod SHIFT, W, exec, ~/.config/hyprland/scripts/set-wallpaper.sh"
         
         # Move focus
         "$mod, left, movefocus, l"
