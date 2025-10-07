@@ -10,15 +10,8 @@
     polkitPolicyOwners = [ "derrick" ];
   };
   
-  # Email - Thunderbird
-  programs.thunderbird = {
-    enable = true;
-    profiles = {
-      default = {
-        isDefault = true;
-      };
-    };
-  };
+  # Email - Thunderbird (installed via packages below)
+  # Thunderbird profiles should be configured in Home Manager if needed
   
   # Install productivity packages
   environment.systemPackages = with pkgs; [
