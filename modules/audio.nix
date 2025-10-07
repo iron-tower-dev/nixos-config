@@ -4,7 +4,7 @@
   # Audio configuration - PipeWire with full compatibility
   
   # Disable PulseAudio (conflicts with PipeWire)
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;  # Renamed from hardware.pulseaudio
   
   # Enable real-time permissions for audio
   security.rtkit.enable = true;

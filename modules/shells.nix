@@ -41,7 +41,7 @@
 
   # Bash configuration
   programs.bash = {
-    enableCompletion = true;
+    completion.enable = true;  # Renamed from enableCompletion
     enableLsColors = true;
     
     # Bash-specific aliases will be in home-manager

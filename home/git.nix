@@ -73,6 +73,7 @@
   # SSH configuration for GitHub
   programs.ssh = {
     enable = true;
+    enableDefaultConfig = false;  # Disable defaults, use explicit config
     
     extraConfig = ''
       # GitHub
