@@ -7,7 +7,7 @@
     
     # Set your wallpaper path here
     # Using local wallpaper from wallpapers directory (works in VMs too!)
-    image = ../wallpapers/nix-snowflake-blue.png;
+    image = ../wallpapers/flower-field-3.png;
     
     # Alternative wallpapers available:
     # image = ../wallpapers/nix-snowflake-dark.png;     # Dark gray theme
