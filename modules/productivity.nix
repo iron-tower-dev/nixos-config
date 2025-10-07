@@ -34,8 +34,7 @@
     pdfarranger        # PDF manipulation
   ];
   
-  # Enable gnome-keyring for password storage
-  services.gnome-keyring.enable = true;  # moved to top-level
+  # Gnome-keyring enabled via PAM in modules/security.nix
   
   # PolicyKit for 1Password
   security.polkit.enable = true;
