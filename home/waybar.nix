@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 
 {
+  # XDG portal settings for Waybar
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "gtk";
+  };
+  
   programs.waybar = {
     enable = true;
     systemd.enable = true;
@@ -220,6 +227,17 @@
         min-height: 0;
       }
       
+      /* Animations */
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
+      }
+      
       window#waybar {
         background: rgba(30, 30, 46, 0.95);
         color: #cdd6f4;
@@ -252,11 +270,6 @@
         background: #f38ba8;
         color: #1e1e2e;
         animation: blink 1s ease infinite;
-      }
-      
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.5; }
       }
       
       /* Window title */
@@ -369,11 +382,6 @@
         background: #f38ba8;
         color: #1e1e2e;
         animation: blink 1s ease infinite;
-      }
-      
-      @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.7; }
       }
       
       /* System tray */
