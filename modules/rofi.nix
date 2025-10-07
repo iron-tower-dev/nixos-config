@@ -22,13 +22,8 @@
     systemd
   ];
 
-  # Rofi configuration is primarily in home-manager
-  # But we can provide some system-level support
-  
-  programs.rofi = {
-    enable = true;
-    package = pkgs.rofi-wayland;
-  };
+  # Rofi configuration is handled entirely by Home Manager
+  # System module only provides packages and scripts
 
   # Create system scripts for Rofi menus
   environment.systemPackages = [
