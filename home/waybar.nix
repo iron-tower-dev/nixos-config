@@ -229,20 +229,26 @@
       
       /* Animations */
       @keyframes blink {
-        0%, 100% {
+        from {
           opacity: 1;
         }
         50% {
           opacity: 0.5;
         }
+        to {
+          opacity: 1;
+        }
       }
       
       @keyframes pulse {
-        0%, 100% {
+        from {
           opacity: 1;
         }
         50% {
           opacity: 0.7;
+        }
+        to {
+          opacity: 1;
         }
       }
       
