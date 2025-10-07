@@ -85,8 +85,7 @@
     
     # Security auditing
     lynis
-    chkrootkit
-    rkhunter
+    rkhunter  # chkrootkit removed (unmaintained upstream)
     
     # Password management
     keepassxc
