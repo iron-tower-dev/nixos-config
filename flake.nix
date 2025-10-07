@@ -118,6 +118,48 @@
             }
           ];
         };
+        
+        # VM configuration for testing
+        iron-vm = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit inputs; };
+          modules = [
+            # Core system configuration
+            ./configuration.nix
+            
+            # Host-specific configuration
+            ./hosts/iron-vm/configuration.nix
+            ./hosts/iron-vm/hardware-configuration.nix
+            
+            # Stylix for system-wide theming
+            stylix.nixosModules.stylix
+            
+            # System modules
+            ./modules/bootloader.nix
+            ./modules/users.nix
+            ./modules/system.nix
+            
+            # Feature modules
+            ./modules/gaming.nix
+            ./modules/development.nix
+            ./modules/productivity.nix
+            ./modules/hyprland.nix
+            ./modules/security.nix
+            ./modules/performance.nix
+            ./modules/stylix.nix
+            ./modules/shells.nix
+            ./modules/neovim.nix
+            
+            # Home Manager
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.users.derrick = import ./home/home.nix;
+            }
+          ];
+        };
       };
 
       # Development shells for various languages
