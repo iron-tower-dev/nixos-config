@@ -18,6 +18,7 @@
       # Startup applications
       exec-once = [
         "swww-daemon"
+        "sleep 1 && swww img ${config.stylix.image} --transition-type fade --transition-duration 2"
         "waybar"
         "mako"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
