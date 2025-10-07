@@ -98,10 +98,10 @@
     };
   };
 
-  # Enable Podman
+  # Enable Podman (dockerCompat disabled to avoid conflict with Docker)
   virtualisation.podman = {
     enable = true;
-    dockerCompat = true;
+    dockerCompat = false;  # Disabled due to conflict with Docker service
     defaultNetwork.settings.dns_enabled = true;
   };
 

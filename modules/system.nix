@@ -82,11 +82,10 @@
     font-awesome
   ];
 
-  # Enable OpenGL
-  hardware.opengl = {
+  # Enable graphics (replaces deprecated hardware.opengl)
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   # Automatic garbage collection
