@@ -84,8 +84,8 @@
     cryptsetup
     
     # Security auditing
-    lynis
-    rkhunter  # chkrootkit removed (unmaintained upstream)
+    lynis  # Comprehensive security auditing tool
+    # rkhunter and chkrootkit removed (not available in nixpkgs)
     
     # Password management
     keepassxc
