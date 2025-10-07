@@ -75,7 +75,7 @@
 
   # Enable udev rules for controllers
   services.udev.packages = with pkgs; [
-    dolphinEmu
+    dolphin-emu  # Fixed typo from dolphinEmu
   ];
 
   # Performance tweaks for gaming
