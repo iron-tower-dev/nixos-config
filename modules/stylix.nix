@@ -6,14 +6,13 @@
     enable = true;
     
     # Set your wallpaper path here
-    # The colors will be automatically generated from this image
-    image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/NixOS/nixos-artwork/master/wallpapers/nix-wallpaper-simple-blue.png";
-      sha256 = "sha256-nhIUtCy/Hggr0n+itats4XFZxU1CPTbiMJLlNczHz24=";
-    };
+    # Using local wallpaper from wallpapers directory (works in VMs too!)
+    image = ../wallpapers/nix-snowflake-blue.png;
     
-    # Or use a local wallpaper (uncomment and adjust path):
-    # image = /home/derrick/Pictures/wallpapers/my-wallpaper.png;
+    # Alternative wallpapers available:
+    # image = ../wallpapers/nix-snowflake-dark.png;     # Dark gray theme
+    # image = ../wallpapers/nix-geometric.png;          # Geometric design
+    # image = ../wallpapers/solid-dark.png;             # Solid color (VM-friendly)
     
     # Base16 scheme (optional - Stylix will generate from image if not set)
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";

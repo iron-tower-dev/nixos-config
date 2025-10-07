@@ -93,6 +93,9 @@
   # Override gaming module settings if needed
   # programs.gamemode.enable = lib.mkForce false;
   
+  # VM-specific Stylix optimization - use solid color wallpaper for better performance
+  stylix.image = lib.mkForce ../../wallpapers/solid-dark.png;
+  
   # Network optimization for VMs
   # VMs typically use NAT or bridged networking configured by the hypervisor
   
