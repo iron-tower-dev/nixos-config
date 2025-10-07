@@ -17,7 +17,4 @@
     ];
     shell = pkgs.fish;
   };
-
-  # Enable fish as a system shell
-  programs.fish.enable = true;
 }
