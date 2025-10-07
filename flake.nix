@@ -15,7 +15,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
 
     # Stylix - System-wide theming
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:nix-community/stylix";
 
     # Nix-Gaming for gaming optimizations
     nix-gaming.url = "github:fufexan/nix-gaming";
@@ -71,7 +71,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.extraSpecialArgs = { inherit inputs stylix; };
               home-manager.users.derrick = import ./home/home.nix;
             }
           ];
@@ -113,7 +113,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.extraSpecialArgs = { inherit inputs stylix; };
               home-manager.users.derrick = import ./home/home.nix;
             }
           ];
@@ -155,7 +155,7 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.extraSpecialArgs = { inherit inputs stylix; };
               home-manager.users.derrick = import ./home/home.nix;
             }
           ];
