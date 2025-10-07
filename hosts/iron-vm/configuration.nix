@@ -42,10 +42,10 @@
   # Graphics for VM (use lightweight option)
   services.xserver.videoDrivers = lib.mkDefault [ "modesetting" ];
   
-  # Enable 3D acceleration for VMs (works with most hypervisors)
-  hardware.opengl = {
+  # Enable graphics acceleration for VMs (works with most hypervisors)
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
+    enable32Bit = lib.mkDefault false;  # Disable 32-bit support to save resources in VM
   };
   
   # VM-friendly file system optimizations
@@ -94,9 +94,7 @@
   # programs.gamemode.enable = lib.mkForce false;
   
   # Network optimization for VMs
-  networking.interfaces = lib.mkDefault {
-    # VM typically uses NAT or bridged networking
-  };
+  # VMs typically use NAT or bridged networking configured by the hypervisor
   
   # Enable SSH for easy access to VM
   # WARNING: Password authentication is enabled for ISOLATED TESTING ONLY
