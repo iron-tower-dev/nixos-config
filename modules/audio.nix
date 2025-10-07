@@ -40,10 +40,8 @@
     pulsemixer         # Terminal mixer
     alsa-utils         # ALSA utilities
     
-    # Audio codecs and libraries
-    pipewire-alsa      # ALSA compatibility
-    pipewire-pulse     # PulseAudio compatibility
-    pipewire-jack      # JACK compatibility
+    # PipeWire compatibility provided by services.pipewire configuration
+    # (alsa, pulse, jack support enabled above)
   ];
   
   # Bluetooth audio support (blueman enabled in system.nix)
