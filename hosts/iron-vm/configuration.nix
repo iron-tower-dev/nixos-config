@@ -22,6 +22,8 @@
   boot.kernelParams = [
     "elevator=noop"  # VM disk scheduler optimization
     "clocksource=kvm-clock"  # Better time sync in VMs
+    "console=ttyS0,115200"  # Serial console for debugging
+    "console=tty1"  # TTY console
   ];
   
   # Faster boot for testing
@@ -83,9 +85,6 @@
   # Uncomment these if the VM is too slow:
   # services.udisks2.enable = lib.mkDefault false;
   # services.gnome.gnome-keyring.enable = lib.mkDefault false;
-  
-  # Enable serial console for debugging
-  boot.kernelParams = [ "console=ttyS0,115200" "console=tty1" ];
   
   # VM memory optimization - enable ZRAM for better memory usage
   zramSwap = {
