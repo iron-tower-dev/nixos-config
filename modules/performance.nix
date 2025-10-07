@@ -49,7 +49,7 @@
     enable = true;
     freeMemThreshold = 5;  # Start killing at 5% free memory
     freeSwapThreshold = 10;
-    enableNotifications = true;
+    enableNotifications = false;  # Disabled to avoid systembus-notify conflicts
   };
 
   # IRQ balance for better interrupt handling
