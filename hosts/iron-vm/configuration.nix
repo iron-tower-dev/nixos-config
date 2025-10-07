@@ -33,12 +33,8 @@
   services.thermald.enable = lib.mkForce false;
   powerManagement.enable = lib.mkDefault false;
   
-  # Enable virtio drivers for better performance
+  # Add VM-specific 9p modules for shared folders (virtio modules from hardware-configuration.nix)
   boot.initrd.availableKernelModules = [ 
-    "virtio_pci" 
-    "virtio_blk" 
-    "virtio_scsi" 
-    "virtio_net"
     "9p"
     "9pnet_virtio"
   ];
