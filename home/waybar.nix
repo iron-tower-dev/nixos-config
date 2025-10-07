@@ -229,13 +229,13 @@
       
       /* Animations */
       @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.5; }
+        0%%, 100%% { opacity: 1; }
+        50%% { opacity: 0.5; }
       }
       
       @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.7; }
+        0%%, 100%% { opacity: 1; }
+        50%% { opacity: 0.7; }
       }
       
       window#waybar {
