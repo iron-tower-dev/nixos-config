@@ -73,16 +73,17 @@
   # SSH configuration for GitHub
   programs.ssh = {
     enable = true;
-    enableDefaultConfig = false;  # Disable defaults, use explicit config
     
-    extraConfig = ''
-      # GitHub
-      Host github.com
-        HostName github.com
-        User git
-        IdentityFile ~/.ssh/github
-        AddKeysToAgent yes
-    '';
+    matchBlocks = {
+      "github.com" = {
+        hostname = "github.com";
+        user = "git";
+        identityFile = "~/.ssh/github";
+        extraOptions = {
+          AddKeysToAgent = "yes";
+        };
+      };
+    };
   };
   
   # Ensure SSH directory exists
