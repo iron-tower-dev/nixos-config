@@ -30,18 +30,18 @@
     # Fonts configuration
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans Mono";
       };
       
       sansSerif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Sans";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
       };
       
       serif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Serif";
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
       };
       
       emoji = {

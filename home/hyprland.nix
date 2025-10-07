@@ -177,17 +177,12 @@
       ];
     };
     
-    # Extra configuration for settings that don't work well in nix attrset format
+    # Extra configuration for border colors
     extraConfig = ''
       # Border colors
       general {
         col.active_border = rgba(33ccffee) rgba(00ff99ee) 45deg
         col.inactive_border = rgba(595959aa)
-      }
-      
-      # Shadow color
-      decoration {
-        col.shadow = rgba(1a1a1aee)
       }
     '';
   };
