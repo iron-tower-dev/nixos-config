@@ -47,8 +47,4 @@
   
   # CPU configuration
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  
-  # Enable CPU microcode updates (works for both AMD and Intel)
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
