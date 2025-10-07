@@ -17,7 +17,7 @@
     chromium
     
     # Communication
-    discord
+    # discord - installed via modules/gaming.nix and configured in discord.nix
     slack
     telegram-desktop
     
