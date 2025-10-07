@@ -96,8 +96,9 @@
   # Disable smartd - VMs don't expose SMART data
   services.smartd.enable = lib.mkForce false;
   
-  # VM-specific Stylix optimization - use solid color wallpaper for better performance
-  stylix.image = lib.mkForce ../../wallpapers/solid-dark.png;
+  # VM-specific Stylix - use wallpaper with color variation
+  # solid-dark.png causes invisible text (no color contrast)
+  stylix.image = lib.mkForce ../../wallpapers/nix-snowflake-blue.png;
   
   # Network optimization for VMs
   # VMs typically use NAT or bridged networking configured by the hypervisor
