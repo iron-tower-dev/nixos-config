@@ -12,7 +12,8 @@
     text = ''
       #!/usr/bin/env bash
       # Set wallpaper using swww
-      sleep 1
+      # Wait longer for swww daemon and other startup processes
+      sleep 3
       swww img "${config.stylix.image}" --transition-type fade --transition-duration 2
     '';
     executable = true;
@@ -30,7 +31,7 @@
       exec-once = [
         "swww-daemon"
         "~/.config/hyprland/scripts/set-wallpaper.sh"
-        "waybar"
+        # waybar is started by systemd (see home/waybar.nix)
         "mako"
         "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"
       ];
