@@ -99,11 +99,15 @@
   };
   
   # Enable SSH for easy access to VM
+  # WARNING: Password authentication is enabled for ISOLATED TESTING ONLY
+  # This is a SECURITY RISK and should NEVER be used in production or on untrusted networks.
+  # For real deployments, use key-based authentication by setting PasswordAuthentication = false
+  # and configuring users.users.<name>.openssh.authorizedKeys instead.
   services.openssh = {
     enable = true;
     settings = {
       PermitRootLogin = "no";
-      PasswordAuthentication = true; # For easier VM testing
+      PasswordAuthentication = true; # TESTING ONLY - change to false for production!
     };
   };
   
