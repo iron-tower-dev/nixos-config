@@ -20,7 +20,7 @@
     # Web/JavaScript/TypeScript/Angular
     nodePackages.typescript-language-server
     nodePackages.vscode-langservers-extracted  # HTML, CSS, JSON, ESLint
-    nodePackages."@angular/language-server"
+    nodePackages."@angular/cli"  # Angular CLI includes language services
     nodePackages.prettier
     
     # Kotlin
