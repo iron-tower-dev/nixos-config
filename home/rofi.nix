@@ -3,7 +3,7 @@
 {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;  # rofi-wayland merged into rofi
     # No manual theme - let Stylix handle theming automatically
     terminal = "${pkgs.wezterm}/bin/wezterm";
     

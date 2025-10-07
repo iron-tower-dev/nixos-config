@@ -3,8 +3,8 @@
 {
   # Rofi - Application launcher and menu system
   environment.systemPackages = with pkgs; [
-    # Rofi for Wayland
-    rofi-wayland
+    # Rofi (includes Wayland support)
+    rofi
     
     # Additional rofi utilities
     rofi-calc
@@ -32,7 +32,7 @@
       
       # Rofi menu for system updates
       choice=$(echo -e "Update System\nUpdate Flake\nGarbage Collect\nCancel" | \
-        ${pkgs.rofi-wayland}/bin/rofi -dmenu -p "System Update")
+        ${pkgs.rofi}/bin/rofi -dmenu -p "System Update")
       
       case "$choice" in
         "Update System")
@@ -52,7 +52,7 @@
       
       # Rofi power menu
       choice=$(echo -e "Shutdown\nReboot\nSuspend\nLock\nLogout\nCancel" | \
-        ${pkgs.rofi-wayland}/bin/rofi -dmenu -p "Power Menu")
+        ${pkgs.rofi}/bin/rofi -dmenu -p "Power Menu")
       
       case "$choice" in
         "Shutdown")
@@ -78,7 +78,7 @@
       
       # Rofi script launcher
       choice=$(echo -e "Screenshot\nScreen Record\nColor Picker\nUpdate System\nPower Menu\nCancel" | \
-        ${pkgs.rofi-wayland}/bin/rofi -dmenu -p "Scripts")
+        ${pkgs.rofi}/bin/rofi -dmenu -p "Scripts")
       
       case "$choice" in
         "Screenshot")
