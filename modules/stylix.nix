@@ -103,10 +103,5 @@
   # GTK theme configuration
   programs.dconf.enable = true;
 
-  # Qt theming
-  qt = {
-    enable = true;
-    platformTheme = "qt5ct";
-    style = "kvantum";
-  };
+  # Qt theming handled automatically by Stylix
 }
