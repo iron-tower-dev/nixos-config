@@ -4,7 +4,6 @@
   # Enable shells
   programs.bash.enable = true;
   programs.zsh.enable = true;
-  programs.fish.enable = true;
 
   # Shell-related packages
   environment.systemPackages = with pkgs; [
@@ -59,11 +58,7 @@
     };
   };
 
-  # Fish configuration is primarily in home-manager
-  # Global fish config
-  programs.fish = {
-    enable = true;
-  };
+  # Fish configuration is handled entirely by home-manager
 
   # Shell aliases (system-wide)
   environment.shellAliases = {
