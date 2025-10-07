@@ -78,7 +78,11 @@
     fira-code
     fira-code-symbols
     jetbrains-mono
-    nerdfonts
+    # Nerd Fonts - individual packages under nerd-fonts namespace
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    nerd-fonts.hack
+    nerd-fonts.symbols-only
     font-awesome
   ];
 
