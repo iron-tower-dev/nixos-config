@@ -39,13 +39,7 @@
   hardware.alsa.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
+  # PipeWire configuration moved to modules/hyprland.nix to avoid conflicts
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
