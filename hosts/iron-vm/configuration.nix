@@ -27,7 +27,7 @@
   ];
   
   # Faster boot for testing
-  boot.loader.timeout = 1;
+  boot.loader.timeout = lib.mkForce 1;
   
   # Disable unnecessary services for VMs to speed up boot
   services.thermald.enable = lib.mkForce false;
