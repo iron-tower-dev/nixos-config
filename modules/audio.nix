@@ -3,9 +3,6 @@
 {
   # Audio configuration - PipeWire with full compatibility
   
-  # Enable ALSA (replaces deprecated sound.enable)
-  hardware.alsa.enable = true;
-  
   # Disable PulseAudio (conflicts with PipeWire)
   hardware.pulseaudio.enable = false;
   
