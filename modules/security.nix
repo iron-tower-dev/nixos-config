@@ -95,8 +95,8 @@
     wireshark
     tcpdump
     
-    # Firewall management
-    ufw
+    # Firewall management via NixOS declarative config (networking.firewall)
+    # ufw not available - NixOS uses declarative firewall configuration
     
     # SELinux tools (if using SELinux instead of AppArmor)
     # policycoreutils
