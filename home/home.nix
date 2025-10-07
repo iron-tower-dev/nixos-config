@@ -118,9 +118,5 @@
     };
   };
 
-  # Qt theming
-  qt = {
-    enable = true;
-    platformTheme.name = "qtct";
-  };
+  # Qt theming handled at system level in modules/stylix.nix
 }
