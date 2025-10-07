@@ -17,7 +17,6 @@
   
   # QEMU/KVM guest agent for better integration
   services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = true; # For SPICE display protocol
   
   # Optimize for virtual hardware
   boot.kernelParams = [
