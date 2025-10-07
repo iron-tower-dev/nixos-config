@@ -1,0 +1,59 @@
+{ config, pkgs, ... }:
+
+{
+  # Audio configuration - PipeWire with full compatibility
+  
+  # Enable ALSA (replaces deprecated sound.enable)
+  hardware.alsa.enable = true;
+  
+  # Disable PulseAudio (conflicts with PipeWire)
+  hardware.pulseaudio.enable = false;
+  
+  # Enable real-time permissions for audio
+  security.rtkit.enable = true;
+  
+  # PipeWire - Modern audio server
+  services.pipewire = {
+    enable = true;
+    
+    # ALSA support
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+    
+    # PulseAudio compatibility
+    pulse.enable = true;
+    
+    # JACK compatibility
+    jack.enable = true;
+    
+    # WirePlumber session manager (default, but explicit)
+    wireplumber.enable = true;
+  };
+  
+  # Audio-related packages
+  environment.systemPackages = with pkgs; [
+    # GUI audio controls
+    pavucontrol        # PulseAudio/PipeWire volume control
+    pwvucontrol        # Native PipeWire volume control
+    
+    # CLI audio tools
+    playerctl          # Media player control
+    pulsemixer         # Terminal mixer
+    alsa-utils         # ALSA utilities
+    
+    # Audio codecs and libraries
+    pipewire-alsa      # ALSA compatibility
+    pipewire-pulse     # PulseAudio compatibility
+    pipewire-jack      # JACK compatibility
+  ];
+  
+  # Bluetooth audio support (blueman enabled in system.nix)
+  
+  # Additional audio tweaks
+  environment.variables = {
+    # Ensure PipeWire is the default audio server
+    PULSE_RUNTIME_PATH = "/run/user/1000/pulse";
+  };
+}

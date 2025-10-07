@@ -93,9 +93,7 @@
     # Video player
     mpv
     
-    # Audio
-    pavucontrol
-    playerctl
+    # Audio packages moved to modules/audio.nix
     
     # Clipboard manager
     cliphist
@@ -117,14 +115,7 @@
     polkit_gnome
   ];
 
-  # Enable sound server
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
+  # Audio configuration moved to modules/audio.nix for reusability
 
   # Enable greetd display manager with tuigreet
   services.greetd = {

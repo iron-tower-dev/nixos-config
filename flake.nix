@@ -54,6 +54,7 @@
             ./modules/bootloader.nix
             ./modules/users.nix
             ./modules/system.nix
+            ./modules/audio.nix
             
             # Feature modules
             ./modules/gaming.nix
@@ -96,6 +97,7 @@
             ./modules/bootloader.nix
             ./modules/users.nix
             ./modules/system.nix
+            ./modules/audio.nix
             
             # Feature modules
             ./modules/gaming.nix
@@ -138,6 +140,7 @@
             ./modules/bootloader.nix
             ./modules/users.nix
             ./modules/system.nix
+            ./modules/audio.nix
             
             # Feature modules
             ./modules/gaming.nix

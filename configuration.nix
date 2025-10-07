@@ -34,12 +34,7 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  # sound.enable is deprecated, using hardware.alsa instead
-  hardware.alsa.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  # PipeWire configuration moved to modules/hyprland.nix to avoid conflicts
+  # Audio configuration moved to modules/audio.nix
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
