@@ -76,7 +76,17 @@ This configuration is optimized for testing your NixOS config in a virtual machi
    - Set Network to NAT or Bridged
    - Enable clipboard sharing
 
-3. Note: You may need to adjust `virtualisation.virtualbox.guest.enable = true` in configuration.nix
+3. **Important for VirtualBox users**: You must enable VirtualBox guest additions.
+   Edit `hosts/iron-vm/configuration.nix` and change line 16:
+   ```nix
+   # Change from:
+   virtualisation.virtualbox.guest.enable = lib.mkDefault false;
+   # To:
+   virtualisation.virtualbox.guest.enable = true;
+   ```
+   This enables proper guest integration, clipboard sharing, and display resolution adjustments.
+
+4. Follow the same installation steps as Option 1
 
 ## Building the Configuration
 
