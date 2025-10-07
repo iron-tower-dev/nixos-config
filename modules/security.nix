@@ -112,26 +112,16 @@
     openssh
   ];
 
-  # SSH hardening (if SSH is enabled)
-  services.openssh = {
-    enable = false;  # Disabled by default, enable if needed
-    settings = {
-      PasswordAuthentication = false;
-      PermitRootLogin = "no";
-      X11Forwarding = false;
-      KbdInteractiveAuthentication = false;
-    };
-    
-    # Only allow specific users (uncomment and adjust)
-    # allowUsers = [ "derrick" ];
-    
-    # Use strong ciphers
-    extraConfig = ''
-      Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
-      MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com
-      KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org
-    '';
-  };
+  # SSH hardening is configured per-host in hosts/*/configuration.nix
+  # This avoids conflicts and allows each host to have appropriate SSH settings
+  # Recommended secure SSH settings:
+  #   PasswordAuthentication = false;
+  #   PermitRootLogin = "no";
+  #   X11Forwarding = false;
+  #   KbdInteractiveAuthentication = false;
+  #   Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com
+  #   MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com
+  #   KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org
 
   # USB Guard for USB device authorization
   services.usbguard = {
