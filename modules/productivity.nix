@@ -20,8 +20,7 @@
     _1password-gui
     
     # Email
-    thunderbird
-    protonmail-bridge  # Proton Mail Bridge for Thunderbird
+    protonmail-bridge  # Proton Mail Bridge for Thunderbird (Thunderbird managed by Home Manager)
     
     # Calendar integration
     gnome.gnome-calendar

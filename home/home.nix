@@ -57,6 +57,7 @@
     ./starship.nix
     ./git.nix
     ./rofi.nix
+    ./thunderbird.nix
   ];
 
   # Git configuration is in ./git.nix
