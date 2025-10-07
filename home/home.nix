@@ -69,12 +69,10 @@
     nix-direnv.enable = true;
   };
 
-  # Bat (cat replacement)
+  # Bat (cat replacement) - theme handled by Stylix
   programs.bat = {
     enable = true;
-    config = {
-      theme = "TwoDark";
-    };
+    # theme managed by Stylix
   };
 
   # Zoxide (cd replacement)
