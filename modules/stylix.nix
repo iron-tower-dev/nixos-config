@@ -79,8 +79,8 @@
       # Hyprland (if not using home-manager for this)
       # hyprland.enable = true;
       
-      # Rofi
-      # rofi.enable = true;
+      # Rofi - themed by Stylix
+      rofi.enable = true;
     };
   };
 
