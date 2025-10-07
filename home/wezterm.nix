@@ -8,8 +8,14 @@
       local wezterm = require 'wezterm'
       local config = {}
 
-      -- Color scheme (Stylix will override this)
+      -- Color scheme with explicit colors to fix invisible text
       config.color_scheme = 'Tokyo Night'
+      
+      -- Force readable colors (fixes Stylix text visibility issues)
+      config.colors = {
+        foreground = '#c0caf5',
+        background = '#1a1b26',
+      }
 
       -- Font configuration
       config.font = wezterm.font('JetBrains Mono', { weight = 'Medium' })
