@@ -76,7 +76,7 @@
       RestartSec = 5;
       # Environment variables if needed
       Environment = [
-        "PATH=${pkgs.gnome.gnome-keyring}/bin:$PATH"
+        "PATH=${pkgs.gnome-keyring}/bin:$PATH"  # moved to top-level
       ];
     };
     

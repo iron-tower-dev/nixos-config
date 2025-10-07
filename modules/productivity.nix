@@ -23,7 +23,7 @@
     protonmail-bridge  # Proton Mail Bridge for Thunderbird (Thunderbird managed by Home Manager)
     
     # Calendar integration
-    gnome.gnome-calendar
+    gnome-calendar  # moved to top-level
     
     # Additional productivity tools
     obsidian           # Note taking
@@ -35,7 +35,7 @@
   ];
   
   # Enable gnome-keyring for password storage
-  services.gnome.gnome-keyring.enable = true;
+  services.gnome-keyring.enable = true;  # moved to top-level
   
   # PolicyKit for 1Password
   security.polkit.enable = true;
