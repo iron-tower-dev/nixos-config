@@ -4,8 +4,7 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    # Simple dark theme (Stylix rofi target not available)
-    theme = "Monokai";
+    # No manual theme - let Stylix handle theming automatically
     terminal = "${pkgs.wezterm}/bin/wezterm";
     
     extraConfig = {
