@@ -93,6 +93,9 @@
   # Override gaming module settings if needed
   # programs.gamemode.enable = lib.mkForce false;
   
+  # Disable smartd - VMs don't expose SMART data
+  services.smartd.enable = lib.mkForce false;
+  
   # VM-specific Stylix optimization - use solid color wallpaper for better performance
   stylix.image = lib.mkForce ../../wallpapers/solid-dark.png;
   
