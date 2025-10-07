@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, stylix, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should manage
@@ -48,7 +48,7 @@
 
   # Home Manager configuration modules
   imports = [
-    stylix.homeManagerModules.stylix
+    # stylix.homeManagerModules.stylix  # Disabled to avoid system-level conflicts
     ./hyprland.nix
     ./waybar.nix
     ./wlogout.nix
