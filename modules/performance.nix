@@ -71,7 +71,7 @@
     htop
     btop
     bottom
-    nvtop  # GPU monitoring
+    # nvtop  # GPU monitoring - install specific variant (nvtopPackages.nvidia, .amd, .intel)
     iotop
     iftop
     nethogs
