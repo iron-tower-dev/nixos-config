@@ -79,7 +79,7 @@
     
     # Performance profiling
     perf-tools
-    linuxPackages.perf
+    perf  # Renamed from linuxPackages.perf
     
     # Benchmarking
     sysbench

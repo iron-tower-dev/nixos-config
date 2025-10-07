@@ -3,8 +3,8 @@
 {
   # Productivity applications module
   
-  # 1Password
-  programs._1password.enable = true;
+  # 1Password CLI
+  programs._1password.enable = true;  # This is for the CLI
   programs._1password-gui = {
     enable = true;
     polkitPolicyOwners = [ "derrick" ];
@@ -16,7 +16,7 @@
   # Install productivity packages
   environment.systemPackages = with pkgs; [
     # Password management
-    _1password
+    _1password-cli  # Renamed from _1password
     _1password-gui
     
     # Email

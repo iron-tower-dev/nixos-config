@@ -61,7 +61,7 @@
   ];
 
   # Enable 32-bit graphics drivers for gaming
-  hardware.opengl.driSupport32Bit = true;
+  hardware.graphics.enable32Bit = true;  # Renamed from hardware.opengl.driSupport32Bit
 
   # Enable Xbox controller support
   hardware.xone.enable = true;
